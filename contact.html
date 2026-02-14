@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Veltex Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'neon-blue': '#00f3ff', 'neon-purple': '#bc13fe', 'deep-navy': '#050511' },
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050511;
+            color: #ffffff;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            box-shadow: 0 0 15px rgba(188, 19, 254, 0.3);
+            border-color: #bc13fe;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-neon-purple selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-tighter hover:text-neon-blue transition-colors">
+                VELTEX<span class="text-neon-blue">.</span>DIGITAL
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                <a href="services.html" class="hover:text-white transition-colors">SERVICES</a>
+                <a href="portfolio.html" class="hover:text-white transition-colors">PORTFOLIO</a>
+                <a href="contact.html" class="text-white">CONTACT</a>
+            </div>
+            <a href="contact.html"
+                class="hidden md:inline-block px-6 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-full text-white font-semibold text-sm hover:shadow-neon-blue transition-all transform hover:scale-105">
+                GET STARTED
+            </a>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none"
+                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div class="md:hidden hidden glass-panel absolute w-full" id="mobile-menu">
+            <div class="px-6 py-4 space-y-4 flex flex-col items-center">
+                <a href="services.html" class="hover:text-neon-blue">SERVICES</a>
+                <a href="portfolio.html" class="hover:text-neon-blue">PORTFOLIO</a>
+                <a href="contact.html" class="text-neon-blue">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-40 pb-10 px-6 text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6" data-aos="fade-down">Get in <span
+                class="text-neon-blue">Touch</span></h1>
+        <p class="text-gray-400 max-w-2xl mx-auto text-lg" data-aos="fade-up">Have a project in mind? Let's discuss.</p>
+    </section>
+
+    <!-- Contact Form & Info -->
+    <section class="pb-24 px-6">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+
+            <!-- Contact Info -->
+            <div class="space-y-8" data-aos="fade-right">
+                <div class="glass-panel p-8 rounded-2xl">
+                    <i class="fas fa-envelope text-3xl text-neon-blue mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Email Us</h3>
+                    <p class="text-gray-400">contact@veltex.digital</p>
+                </div>
+                <div class="glass-panel p-8 rounded-2xl">
+                    <i class="fas fa-phone text-3xl text-neon-purple mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Call Us</h3>
+                    <p class="text-gray-400">+1 (555) 123-4567</p>
+                </div>
+                <div class="glass-panel p-8 rounded-2xl">
+                    <i class="fas fa-map-marker-alt text-3xl text-cyan-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Visit Us</h3>
+                    <p class="text-gray-400">123 Tech Park, Innovation City</p>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="glass-panel p-10 rounded-3xl border border-white/10" data-aos="fade-left">
+                <form action="https://formsubmit.co/mdsubir1999@gmail.com" method="POST" class="space-y-6">
+                    <!-- Honey Pot -->
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Name</label>
+                        <input type="text" name="name" required
+                            class="w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-neon-blue transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                        <input type="email" name="email" required
+                            class="w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-neon-blue transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Subject</label>
+                        <select name="subject"
+                            class="w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-neon-blue transition-colors">
+                            <option value="" disabled selected>Select a Service</option>
+                            <option>SEO Optimization</option>
+                            <option>PPC Advertising</option>
+                            <option>Social Media Marketing</option>
+                            <option>Social Media Ads</option>
+                            <option>Web Design & Development</option>
+                            <option>Lead Generation</option>
+                            <option>Content Marketing</option>
+                            <option>Graphic Designing</option>
+                            <option>Video Marketing</option>
+                            <option>Email Marketing</option>
+                            <option>WhatsApp Marketing</option>
+                            <option>CRO</option>
+                            <option>ORM (Reputation)</option>
+                            <option>Analytics & Tracking</option>
+                            <option>Marketing Automation</option>
+                            <option>Advanced Services (AI/High-Ticket)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                        <textarea name="message" rows="4" required
+                            class="w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-neon-blue transition-colors"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full py-4 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg font-bold text-white text-lg hover:shadow-neon-purple transition-all transform hover:scale-[1.02]">
+                        SEND MESSAGE
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 bg-black text-center">
+        <p class="text-gray-500">© 2025 Veltex Digital.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+
+</html>

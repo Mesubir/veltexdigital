@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Veltex Digital</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-blue': '#00f3ff',
+                        'neon-purple': '#bc13fe',
+                        'deep-navy': '#050511',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neon-blue': '0 0 20px rgba(0, 243, 255, 0.5)',
+                        'neon-purple': '0 0 20px rgba(188, 19, 254, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050511;
+            color: #ffffff;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .service-card:hover {
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.2);
+            border-color: rgba(0, 243, 255, 0.5);
+        }
+
+        /* Custom scrollbar for service lists if needed */
+        .service-list::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .service-list::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .service-list::-webkit-scrollbar-thumb {
+            background: #bc13fe;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-neon-purple selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold tracking-tighter hover:text-neon-blue transition-colors">
+                VELTEX<span class="text-neon-blue">.</span>DIGITAL
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                <a href="services.html" class="text-white">SERVICES</a>
+                <a href="portfolio.html" class="hover:text-white transition-colors">PORTFOLIO</a>
+                <a href="contact.html" class="hover:text-white transition-colors">CONTACT</a>
+            </div>
+            <a href="contact.html"
+                class="hidden md:inline-block px-6 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-full text-white font-semibold text-sm hover:shadow-neon-blue transition-all transform hover:scale-105">
+                GET STARTED
+            </a>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none"
+                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div class="md:hidden hidden glass-panel absolute w-full" id="mobile-menu">
+            <div class="px-6 py-4 space-y-4 flex flex-col items-center">
+                <a href="services.html" class="text-neon-blue">SERVICES</a>
+                <a href="portfolio.html" class="hover:text-neon-blue">PORTFOLIO</a>
+                <a href="contact.html" class="hover:text-neon-blue">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-40 pb-20 px-6 text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6" data-aos="fade-down">Our <span
+                class="text-neon-blue">Services</span></h1>
+        <p class="text-gray-400 max-w-2xl mx-auto text-lg" data-aos="fade-up">Full-spectrum digital solutions engineered
+            for domination.</p>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="pb-24 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- 1. SEO -->
+            <div class="service-card glass-panel p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300 h-full flex flex-col"
+                data-aos="fade-up">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-search text-4xl text-neon-blue bg-white/5 p-4 rounded-xl"></i>
+                    <h3 class="text-2xl font-bold ml-4">SEO Optimization</h3>
+                </div>
+                <p class="text-gray-400 mb-4 text-sm">Rank #1 on Google and drive organic traffic that converts.</p>
+                <ul class="space-y-2 text-gray-300 text-sm mt-auto">
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> Keyword Research & Strategy</li>
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> On-Page & Technical SEO</li>
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> Local SEO & GMB Optimization</li>
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> Off-Page Backlinking</li>
+                </ul>
+            </div>
+
+            <!-- 2. PPC -->
+            <div class="service-card glass-panel p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300 h-full flex flex-col"
+                data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-mouse-pointer text-4xl text-neon-purple bg-white/5 p-4 rounded-xl"></i>
+                    <h3 class="text-2xl font-bold ml-4">PPC Advertising</h3>
+                </div>
+                <p class="text-gray-400 mb-4 text-sm">Instant visibility with high-ROI paid search campaigns.</p>
+                <ul class="space-y-2 text-gray-300 text-sm mt-auto">
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> Google Search & Display Ads</li>
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> YouTube & Shopping Ads</li>
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> Remarketing Campaigns</li>
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> Conversion Tracking</li>
+                </ul>
+            </div>
+
+            <!-- 3. SMM -->
+            <div class="service-card glass-panel p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300 h-full flex flex-col"
+                data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-share-alt text-4xl text-pink-500 bg-white/5 p-4 rounded-xl"></i>
+                    <h3 class="text-2xl font-bold ml-4">Social Media Marketing</h3>
+                </div>
+                <p class="text-gray-400 mb-4 text-sm">Build a loyal community and engage your audience organically.</p>
+                <ul class="space-y-2 text-gray-300 text-sm mt-auto">
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> FB, IG, LinkedIn, Twitter, Pinterest</li>
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> Content Calendar & Strategy</li>
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> Community Management</li>
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> Engagement Growth</li>
+                </ul>
+            </div>
+
+            <!-- 4. Social Ads -->
+            <div class="service-card glass-panel p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300 h-full flex flex-col"
+                data-aos="fade-up" data-aos-delay="300">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-bullhorn text-4xl text-blue-500 bg-white/5 p-4 rounded-xl"></i>
+                    <h3 class="text-2xl font-bold ml-4">Social Media Ads</h3>
+                </div>
+                <p class="text-gray-400 mb-4 text-sm">Targeted ad campaigns that generate leads and sales.</p>
+                <ul class="space-y-2 text-gray-300 text-sm mt-auto">
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> Facebook & Instagram Ads</li>
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> LinkedIn & WhatsApp Ads</li>
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> Lead Generation Forms</li>
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> Precise Audience Targeting</li>
+                </ul>
+            </div>
+
+            <!-- 5. Web Dev -->
+            <div class="service-card glass-panel p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300 h-full flex flex-col"
+                data-aos="fade-up" data-aos-delay="400">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-code text-4xl text-green-400 bg-white/5 p-4 rounded-xl"></i>
+                    <h3 class="text-2xl font-bold ml-4">Web Development</h3>
+                </div>
+                <p class="text-gray-400 mb-4 text-sm">High-performance websites designed for speed and conversion.</p>
+                <ul class="space-y-2 text-gray-300 text-sm mt-auto">
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> Business & Custom Websites</li>
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> E-commerce Solutions</li>
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> Landing Pages & Funnels</li>
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> WordPress Development</li>
+                </ul>
+            </div>
+
+            <!-- 6. Lead Gen -->
+            <div class="service-card glass-panel p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300 h-full flex flex-col"
+                data-aos="fade-up" data-aos-delay="500">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-filter text-4xl text-yellow-400 bg-white/5 p-4 rounded-xl"></i>
+                    <h3 class="text-2xl font-bold ml-4">Lead Generation</h3>
+                </div>
+                <p class="text-gray-400 mb-4 text-sm">Fill your pipeline with high-quality, qualified leads.</p>
+                <ul class="space-y-2 text-gray-300 text-sm mt-auto">
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> Facebook & Google Lead Gen</li>
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> Sales Funnel Creation</li>
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> Landing Page Optimization</li>
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> Automated Lead Nurturing</li>
+                </ul>
+            </div>
+
+            <!-- 7. Content Marketing -->
+            <div class="service-card glass-panel p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300 h-full flex flex-col"
+                data-aos="fade-up">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-pen-nib text-4xl text-indigo-400 bg-white/5 p-4 rounded-xl"></i>
+                    <h3 class="text-2xl font-bold ml-4">Content Marketing</h3>
+                </div>
+                <ul class="space-y-2 text-gray-300 text-sm mt-auto">
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> Blog & Article Writing</li>
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> Website Copywriting</li>
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> SEO-Optimized Content</li>
+                </ul>
+            </div>
+
+            <!-- 8. Graphic Design -->
+            <div class="service-card glass-panel p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300 h-full flex flex-col"
+                data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-palette text-4xl text-rose-400 bg-white/5 p-4 rounded-xl"></i>
+                    <h3 class="text-2xl font-bold ml-4">Graphic Designing</h3>
+                </div>
+                <ul class="space-y-2 text-gray-300 text-sm mt-auto">
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> Social Media Creatives</li>
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> Ad Banners & Logos</li>
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> Brochures & Branding</li>
+                </ul>
+            </div>
+
+            <!-- 9. Video Marketing -->
+            <div class="service-card glass-panel p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300 h-full flex flex-col"
+                data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-video text-4xl text-red-500 bg-white/5 p-4 rounded-xl"></i>
+                    <h3 class="text-2xl font-bold ml-4">Video Marketing</h3>
+                </div>
+                <ul class="space-y-2 text-gray-300 text-sm mt-auto">
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> YouTube Marketing</li>
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> Reels & Shorts Creation</li>
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> Professional Video Editing</li>
+                </ul>
+            </div>
+
+            <!-- 10. Email Marketing -->
+            <div class="service-card glass-panel p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300 h-full flex flex-col"
+                data-aos="fade-up" data-aos-delay="300">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-envelope-open-text text-4xl text-orange-400 bg-white/5 p-4 rounded-xl"></i>
+                    <h3 class="text-2xl font-bold ml-4">Email Marketing</h3>
+                </div>
+                <ul class="space-y-2 text-gray-300 text-sm mt-auto">
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> Campaign Setup & Strategy</li>
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> Automated Flows</li>
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> Newsletter Design</li>
+                </ul>
+            </div>
+
+            <!-- 11. WhatsApp Marketing -->
+            <div class="service-card glass-panel p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300 h-full flex flex-col"
+                data-aos="fade-up" data-aos-delay="400">
+                <div class="flex items-center mb-6">
+                    <i class="fab fa-whatsapp text-4xl text-green-500 bg-white/5 p-4 rounded-xl"></i>
+                    <h3 class="text-2xl font-bold ml-4">WhatsApp Marketing</h3>
+                </div>
+                <ul class="space-y-2 text-gray-300 text-sm mt-auto">
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> Bulk Messaging</li>
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> Chatbot Automation</li>
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> API Integration</li>
+                </ul>
+            </div>
+
+            <!-- 12. CRO -->
+            <div class="service-card glass-panel p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300 h-full flex flex-col"
+                data-aos="fade-up" data-aos-delay="500">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-chart-line text-4xl text-teal-400 bg-white/5 p-4 rounded-xl"></i>
+                    <h3 class="text-2xl font-bold ml-4">CRO</h3>
+                </div>
+                <ul class="space-y-2 text-gray-300 text-sm mt-auto">
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> Landing Page Optimization</li>
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> A/B Testing</li>
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> User Behavior Analysis</li>
+                </ul>
+            </div>
+
+            <!-- 13. ORM -->
+            <div class="service-card glass-panel p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300 h-full flex flex-col"
+                data-aos="fade-up">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-thumbs-up text-4xl text-blue-400 bg-white/5 p-4 rounded-xl"></i>
+                    <h3 class="text-2xl font-bold ml-4">Reputation (ORM)</h3>
+                </div>
+                <ul class="space-y-2 text-gray-300 text-sm mt-auto">
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> Review Management</li>
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> Brand Monitoring</li>
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> Crisis Management</li>
+                </ul>
+            </div>
+
+            <!-- 14. Analytics -->
+            <div class="service-card glass-panel p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300 h-full flex flex-col"
+                data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-chart-pie text-4xl text-purple-400 bg-white/5 p-4 rounded-xl"></i>
+                    <h3 class="text-2xl font-bold ml-4">Analytics & Tracking</h3>
+                </div>
+                <ul class="space-y-2 text-gray-300 text-sm mt-auto">
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> Google Analytics (GA4)</li>
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> Meta Pixel & GTM Setup</li>
+                    <li><i class="fas fa-check text-neon-blue mr-2"></i> Advanced RoAS Tracking</li>
+                </ul>
+            </div>
+
+            <!-- 15. Automation -->
+            <div class="service-card glass-panel p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300 h-full flex flex-col"
+                data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center mb-6">
+                    <i class="fas fa-robot text-4xl text-gray-300 bg-white/5 p-4 rounded-xl"></i>
+                    <h3 class="text-2xl font-bold ml-4">Marketing Automation</h3>
+                </div>
+                <ul class="space-y-2 text-gray-300 text-sm mt-auto">
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> Email & WhatsApp Workflows</li>
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> Lead Nurturing sequences</li>
+                    <li><i class="fas fa-check text-neon-purple mr-2"></i> 24/7 Automation</li>
+                </ul>
+            </div>
+
+            <!-- 16. Advanced -->
+            <div class="service-card glass-panel p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300 h-full flex flex-col bg-gradient-to-br from-neon-blue/10 to-neon-purple/10 border-neon-blue/30"
+                data-aos="fade-up" data-aos-delay="300">
+                <div class="flex items-center mb-6">
+                    <i
+                        class="fas fa-rocket text-4xl text-white bg-gradient-to-r from-neon-blue to-neon-purple p-4 rounded-xl shadow-neon-blue"></i>
+                    <h3 class="text-2xl font-bold ml-4">Advanced (Premium)</h3>
+                </div>
+                <ul class="space-y-2 text-gray-300 text-sm mt-auto">
+                    <li><i class="fas fa-star text-yellow-400 mr-2"></i> High-Ticket Sales Funnels</li>
+                    <li><i class="fas fa-star text-yellow-400 mr-2"></i> AI Marketing Integration</li>
+                    <li><i class="fas fa-star text-yellow-400 mr-2"></i> Chatbot Development</li>
+                    <li><i class="fas fa-star text-yellow-400 mr-2"></i> Influencer & Affiliate Marketing</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 text-center bg-gradient-to-t from-neon-purple/10 to-transparent">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to dominate your niche?</h2>
+        <a href="contact.html"
+            class="inline-block px-10 py-4 bg-white text-black font-bold rounded-full hover:bg-neon-blue hover:text-white transition-all duration-300 transform hover:scale-105 shadow-xl">
+            Get a Free Strategy Call
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 bg-black text-center">
+        <p class="text-gray-500">© 2025 Veltex Digital. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+
+</html>

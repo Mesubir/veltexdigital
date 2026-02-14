@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veltex Digital | Scaling Brands to the Next Level</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-blue': '#00f3ff',
+                        'neon-purple': '#bc13fe',
+                        'deep-navy': '#050511',
+                        'glass': 'rgba(255, 255, 255, 0.05)',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    },
+                    boxShadow: {
+                        'neon-blue': '0 0 20px rgba(0, 243, 255, 0.5)',
+                        'neon-purple': '0 0 20px rgba(188, 19, 254, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050511;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #050511;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #00f3ff, #bc13fe);
+            border-radius: 4px;
+        }
+
+        /* Moving Gradient Background */
+        .animated-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(188, 19, 254, 0.15) 0%, rgba(5, 5, 17, 0) 50%),
+                radial-gradient(circle at 10% 10%, rgba(0, 243, 255, 0.1) 0%, rgba(5, 5, 17, 0) 40%);
+            z-index: -1;
+            animation: pulseBg 10s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseBg {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Floating Animation */
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Glassmorphism */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Glow Text */
+        .text-glow {
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+        }
+
+        /* Nav Link Hover */
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #00f3ff;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Card Hover Glow */
+        .service-card:hover {
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.2);
+            border-color: rgba(0, 243, 255, 0.5);
+        }
+
+        /* Input Focus */
+        input:focus,
+        textarea:focus {
+            outline: none;
+            box-shadow: 0 0 15px rgba(188, 19, 254, 0.3);
+            border-color: #bc13fe;
+        }
+
+        /* Particle css simply implemented */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -2;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            animation: moveParticle 20s linear infinite;
+        }
+
+        @keyframes moveParticle {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh) translateX(50px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-neon-purple selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-panel" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html"
+                class="text-2xl font-bold tracking-tighter hover:text-neon-blue transition-colors duration-300">
+                VELTEX<span class="text-neon-blue">.</span>DIGITAL
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide text-gray-300">
+                <a href="services.html" class="nav-link hover:text-white transition-colors">SERVICES</a>
+                <a href="portfolio.html" class="nav-link hover:text-white transition-colors">PORTFOLIO</a>
+                <a href="contact.html" class="nav-link hover:text-white transition-colors">CONTACT</a>
+            </div>
+            <a href="contact.html"
+                class="hidden md:inline-block px-6 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-full text-white font-semibold text-sm hover:shadow-neon-blue transition-all duration-300 transform hover:scale-105">
+                GET STARTED
+            </a>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden glass-panel absolute w-full" id="mobile-menu">
+            <div class="px-6 py-4 space-y-4 flex flex-col items-center">
+                <a href="services.html" class="hover:text-neon-blue transition-colors">SERVICES</a>
+                <a href="portfolio.html" class="hover:text-neon-blue transition-colors">PORTFOLIO</a>
+                <a href="contact.html" class="hover:text-neon-blue transition-colors">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden" id="home">
+        <div class="animated-bg"></div>
+        <div class="particles" id="particles-container"></div>
+
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+            <h2 class="text-neon-blue font-semibold tracking-widest text-sm mb-4" data-aos="fade-down"
+                data-aos-delay="100">DIGITAL TRANSFORMATION AGENCY</h2>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight" data-aos="zoom-in"
+                data-aos-duration="1000">
+                SCALING BRANDS<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple text-glow">TO
+                    THE NEXT LEVEL</span>
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                We craft futuristic digital experiences that captivate, convert, and dominate the market.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6" data-aos="fade-up"
+                data-aos-delay="400">
+                <a href="contact.html"
+                    class="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-full font-bold hover:bg-neon-blue hover:text-deep-navy transition-all duration-300 shadow-neon-blue floating">
+                    Ignite Your Growth
+                </a>
+                <a href="services.html"
+                    class="text-gray-300 hover:text-white flex items-center gap-2 transition-colors duration-300 group">
+                    Explore Services <i
+                        class="fas fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-gray-500 text-xl"></i>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <!-- Achievements Section -->
+    <section class="py-20 bg-black/50 border-b border-white/5 relative z-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <span class="text-neon-blue font-semibold tracking-widest text-sm uppercase">Real Results</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Our Proven Impact</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <!-- SEO -->
+                <div class="p-6 glass-panel rounded-2xl border border-white/5 hover:border-neon-blue/50 transition-colors duration-300"
+                    data-aos="fade-up">
+                    <p class="text-neon-blue text-xs font-bold tracking-widest uppercase mb-4">SEO Service</p>
+                    <h3 class="text-4xl md:text-5xl font-bold text-white mb-2">1.2M+</h3>
+                    <p class="text-gray-400 text-sm uppercase tracking-wider mb-2">Impressions</p>
+                    <div class="inline-block px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20">
+                        <p class="text-xs text-green-400 font-mono"><i class="fas fa-arrow-up mr-1"></i>300% Growth</p>
+                    </div>
+                </div>
+
+                <!-- Meta Ads -->
+                <div class="p-6 glass-panel rounded-2xl border border-white/5 hover:border-neon-purple/50 transition-colors duration-300"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <p class="text-neon-purple text-xs font-bold tracking-widest uppercase mb-4">Meta Ads</p>
+                    <h3 class="text-4xl md:text-5xl font-bold text-white mb-2">95%</h3>
+                    <p class="text-gray-400 text-sm uppercase tracking-wider mb-2">Qualified Leads</p>
+                    <div class="inline-block px-3 py-1 rounded-full bg-neon-purple/10 border border-neon-purple/20">
+                        <p class="text-xs text-neon-purple font-mono"><i class="fas fa-check mr-1"></i>Zero Junk</p>
+                    </div>
+                </div>
+
+                <!-- Google Ads -->
+                <div class="p-6 glass-panel rounded-2xl border border-white/5 hover:border-cyan-400/50 transition-colors duration-300"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <p class="text-cyan-400 text-xs font-bold tracking-widest uppercase mb-4">Google Ads</p>
+                    <h3 class="text-4xl md:text-5xl font-bold text-white mb-2">50%</h3>
+                    <p class="text-gray-400 text-sm uppercase tracking-wider mb-2">Higher ROI</p>
+                    <div class="inline-block px-3 py-1 rounded-full bg-cyan-400/10 border border-cyan-400/20">
+                        <p class="text-xs text-cyan-400 font-mono"><i class="fas fa-chart-line mr-1"></i>Optimized</p>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="p-6 glass-panel rounded-2xl border border-white/5 hover:border-indigo-500/50 transition-colors duration-300"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <p class="text-indigo-400 text-xs font-bold tracking-widest uppercase mb-4">Social Media</p>
+                    <h3 class="text-4xl md:text-5xl font-bold text-white mb-2">3000%</h3>
+                    <p class="text-gray-400 text-sm uppercase tracking-wider mb-2">Reach Growth</p>
+                    <div class="inline-block px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20">
+                        <p class="text-xs text-indigo-400 font-mono"><i class="fas fa-arrow-up mr-1"></i>3K+ Views</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-24 bg-deep-navy relative" id="services">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-neon-purple font-semibold tracking-widest text-sm uppercase">Our Expertise</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-2">Future-Ready Services</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Service 1 -->
+                <div class="service-card glass-panel p-8 rounded-2xl border border-white/5 transition-all duration-300 group hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-neon-blue to-blue-600 rounded-xl flex items-center justify-center mb-6 text-white text-2xl shadow-lg group-hover:shadow-neon-blue transition-all duration-300">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-neon-blue transition-colors">SEO Mastery</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Dominate search rankings with AI-driven strategies
+                        and technical precision.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card glass-panel p-8 rounded-2xl border border-white/5 transition-all duration-300 group hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-neon-purple to-pink-600 rounded-xl flex items-center justify-center mb-6 text-white text-2xl shadow-lg group-hover:shadow-neon-purple transition-all duration-300">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-neon-purple transition-colors">Meta Ads</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">High-conversion campaigns that target, retarget,
+                        and scale your ROI relentlessly.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card glass-panel p-8 rounded-2xl border border-white/5 transition-all duration-300 group hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-cyan-400 to-teal-400 rounded-xl flex items-center justify-center mb-6 text-white text-2xl shadow-lg group-hover:shadow-cyan-400 transition-all duration-300">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">Content Creation</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Compelling storytelling and premium visuals that
+                        build brand authority.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card glass-panel p-8 rounded-2xl border border-white/5 transition-all duration-300 group hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-violet-600 rounded-xl flex items-center justify-center mb-6 text-white text-2xl shadow-lg group-hover:shadow-indigo-500 transition-all duration-300">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 group-hover:text-indigo-400 transition-colors">Web Development
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Blazing fast, responsive, and aesthetic websites
+                        built for the modern web.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="py-24 relative" id="portfolio">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12" data-aos="fade-right">
+                <div>
+                    <span class="text-neon-blue font-semibold tracking-widest text-sm uppercase">Selected Works</span>
+                    <h2 class="text-4xl md:text-5xl font-bold mt-2">Digital Masterpieces</h2>
+                </div>
+                <a href="#"
+                    class="hidden md:inline-flex items-center text-neon-purple hover:text-white transition-colors mt-4 md:mt-0">
+                    View All Projects <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="group relative overflow-hidden rounded-2xl h-80 cursor-pointer" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <!-- Placeholder Image (Gradient) -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-gray-800 to-black group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <!-- Overlay -->
+                    <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors duration-300">
+                    </div>
+
+                    <div
+                        class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <span class="text-neon-blue text-xs tracking-wider uppercase mb-2 block">Fintech</span>
+                        <h3 class="text-2xl font-bold mb-2">Nexus Pay App</h3>
+                        <p
+                            class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            Complete UI/UX overhaul resulting in 40% increased user retention.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 2 -->
+                <div class="group relative overflow-hidden rounded-2xl h-80 cursor-pointer" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-tr from-indigo-900 to-purple-900 group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors duration-300">
+                    </div>
+
+                    <div
+                        class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <span class="text-neon-purple text-xs tracking-wider uppercase mb-2 block">E-Commerce</span>
+                        <h3 class="text-2xl font-bold mb-2">Aura Fashion</h3>
+                        <p
+                            class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            Shopify implementation with custom 3D product viewer.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Portfolio Item 3 -->
+                <div class="group relative overflow-hidden rounded-2xl h-80 cursor-pointer" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-bl from-teal-900 to-emerald-900 group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors duration-300">
+                    </div>
+
+                    <div
+                        class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <span class="text-cyan-400 text-xs tracking-wider uppercase mb-2 block">SaaS</span>
+                        <h3 class="text-2xl font-bold mb-2">CloudFlow</h3>
+                        <p
+                            class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            Brand identity and marketing site for cloud infrastructure.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-8 md:hidden">
+                <a href="#" class="inline-flex items-center text-neon-purple hover:text-white transition-colors">
+                    View All Projects <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-24 bg-deep-navy relative" id="contact">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-neon-purple rounded-full blur-3xl opacity-20"></div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 bg-neon-blue rounded-full blur-3xl opacity-20"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="glass-panel p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl" data-aos="zoom-in">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to <span class="text-neon-blue">Scale?</span>
+                    </h2>
+                    <p class="text-gray-400">Tell us about your project and let's build something extraordinary.</p>
+                </div>
+
+                <form action="https://formsubmit.co/mdsubir1999@gmail.com" method="POST" class="space-y-6">
+                    <!-- Honey Pot -->
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-400 mb-2">Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-neon-blue transition-colors placeholder-gray-600"
+                                placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-neon-blue transition-colors placeholder-gray-600"
+                                placeholder="john@example.com">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="service" class="block text-sm font-medium text-gray-400 mb-2">Service Interested
+                            In</label>
+                        <select id="service" name="service"
+                            class="w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-neon-blue transition-colors">
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="seo">SEO Optimization</option>
+                            <option value="ppc">PPC Advertising</option>
+                            <option value="smm">Social Media Marketing</option>
+                            <option value="social_ads">Social Media Ads</option>
+                            <option value="webdev">Web Design & Development</option>
+                            <option value="lead_gen">Lead Generation</option>
+                            <option value="content">Content Marketing</option>
+                            <option value="graphic">Graphic Designing</option>
+                            <option value="video">Video Marketing</option>
+                            <option value="email">Email Marketing</option>
+                            <option value="whatsapp">WhatsApp Marketing</option>
+                            <option value="cro">CRO</option>
+                            <option value="orm">ORM (Reputation)</option>
+                            <option value="analytics">Analytics & Tracking</option>
+                            <option value="automation">Marketing Automation</option>
+                            <option value="advanced">Advanced Services (AI/High-Ticket)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="4" required
+                            class="w-full bg-black/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:border-neon-blue transition-colors placeholder-gray-600"
+                            placeholder="Briefly describe your project goals..."></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full py-4 bg-gradient-to-r from-neon-blue to-neon-purple rounded-lg font-bold text-white text-lg hover:shadow-neon-purple transition-all duration-300 transform hover:scale-[1.02]">
+                        SEND MESSAGE
+                    </button>
+                    <!-- Success/Error Redirects (Optional, FormSubmit handles default) -->
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 bg-black">
+        <div
+            class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="mb-6 md:mb-0">
+                <a href="#" class="text-2xl font-bold tracking-tighter text-white">
+                    VELTEX<span class="text-neon-blue">.</span>DIGITAL
+                </a>
+                <p class="text-gray-500 text-sm mt-2">© 2025 Veltex Digital. All rights reserved.</p>
+            </div>
+
+            <div class="flex space-x-6 text-2xl">
+                <a href="#" class="text-gray-500 hover:text-neon-blue transition-colors"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-500 hover:text-neon-blue transition-colors"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-gray-500 hover:text-neon-blue transition-colors"><i
+                        class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Sticky Navbar Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black/80', 'backdrop-blur-xl', 'shadow-lg');
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('bg-black/80', 'backdrop-blur-xl', 'shadow-lg');
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2');
+            }
+        });
+
+        // Simple Particle Generator
+        const particleContainer = document.getElementById('particles-container');
+        const particleCount = 20;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+
+            // Randomize position and size
+            const x = Math.random() * 100;
+            const size = Math.random() * 4 + 1;
+            const duration = Math.random() * 10 + 10;
+            const delay = Math.random() * 5;
+
+            particle.style.left = `${x}%`;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.animationDuration = `${duration}s`;
+            particle.style.animationDelay = `${delay}s`;
+
+            particleContainer.appendChild(particle);
+        }
+    </script>
+</body>
+
+</html>
