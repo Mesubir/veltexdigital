@@ -1,0 +1,19 @@
+(function() {
+
+  function cleanURL() {
+
+    var path = window.location.pathname;
+
+    if (path.endsWith(".html")) {
+
+      var clean = path.slice(0, -5);
+
+      window.history.replaceState(null, null, clean);
+
+    }
+
+  }
+
+  window.addEventListener("load", cleanURL);
+
+})();
