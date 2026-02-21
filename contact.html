@@ -20,6 +20,12 @@
             }
         }
     </script>
+    <script>
+if (window.location.pathname.endsWith(".html")) {
+  var clean = window.location.pathname.replace(".html", "");
+  window.history.replaceState(null, null, clean);
+}
+</script>
     <style>
         body {
             background-color: #050511;
@@ -167,5 +173,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
+
 
 </html>
