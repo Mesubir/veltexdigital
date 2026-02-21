@@ -1,19 +1,48 @@
-(function() {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Redirecting...</title>
 
-  function cleanURL() {
+<script>
 
-    var path = window.location.pathname;
+// Base path for custom domain (empty because it's root)
+var basePath = "";
 
-    if (path.endsWith(".html")) {
+// Get current path
+var path = window.location.pathname;
 
-      var clean = path.slice(0, -5);
+// Remove starting slash
+var page = path.replace(/^\/+/, "");
 
-      window.history.replaceState(null, null, clean);
+// If empty → go to index
+if(page === "") {
+  window.location.replace(basePath + "/index.html");
+}
 
-    }
+// If already .html → clean URL
+else if(page.endsWith(".html")) {
 
-  }
+  var clean = page.replace(".html", "");
 
-  window.addEventListener("load", cleanURL);
+  window.history.replaceState(null, null, "/" + clean);
+}
 
-})();
+// If clean URL → load .html file
+else {
+
+  window.location.replace(basePath + "/" + page + ".html");
+
+}
+
+</script>
+
+</head>
+<body>
+
+<h2 style="font-family:sans-serif;text-align:center;margin-top:50px;">
+Loading...
+</h2>
+
+</body>
+</html>
