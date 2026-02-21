@@ -1,21 +1,26 @@
-// Universal .html URL remover
-(function() {
+// SAFE PRO Clean URL (No blank screen, no redirect loop)
+(function () {
 
-  function removeHtmlFromURL() {
+  // Remove .html from URL safely
+  function cleanURL() {
 
     var path = window.location.pathname;
 
     if (path.endsWith(".html")) {
 
-      var cleanURL = path.slice(0, -5);
+      var clean = path.substring(0, path.length - 5);
 
-      window.history.replaceState(null, null, cleanURL);
+      window.history.replaceState(null, null, clean);
 
     }
 
   }
 
-  // Run when page loads
-  window.addEventListener("load", removeHtmlFromURL);
+  // Run only once when page fully loads
+  window.addEventListener("DOMContentLoaded", function () {
+
+    cleanURL();
+
+  });
 
 })();
