@@ -64,6 +64,44 @@
             background: #bc13fe;
             border-radius: 2px;
         }
+
+        /* Mobile Optimization for 2-column layout */
+        @media (max-width: 768px) {
+            .service-card {
+                padding: 1.25rem !important;
+                /* Forces smaller padding on mobile */
+            }
+
+            .service-card h3 {
+                font-size: 1.1rem !important;
+                /* Smaller headings to prevent wrap issues */
+                margin-left: 0.5rem !important;
+            }
+
+            .service-card i.text-4xl {
+                font-size: 1.5rem !important;
+                /* Smaller icons */
+                padding: 0.5rem !important;
+            }
+
+            .service-card p.text-sm {
+                font-size: 0.75rem !important;
+                /* Smaller description text */
+                line-height: 1.2 !important;
+                margin-bottom: 0.5rem !important;
+            }
+
+            .service-card ul {
+                font-size: 0.7rem !important;
+                /* Shrink list items */
+                line-height: 1.1 !important;
+            }
+
+            .service-card .flex.items-center.mb-6 {
+                margin-bottom: 0.75rem !important;
+                /* Tighter layout */
+            }
+        }
     </style>
 </head>
 
@@ -109,8 +147,8 @@
     </section>
 
     <!-- Services Grid -->
-    <section class="pb-24 px-6">
-        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+    <section class="pb-24 pt-6 px-4 md:px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-8">
 
             <!-- 1. SEO -->
             <div class="service-card glass-panel p-5 md:p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300 h-full flex flex-col"
