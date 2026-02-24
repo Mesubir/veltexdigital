@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Agency in Delhi | Veltex Digital</title>
+    <meta name="description"
+        content="Top Digital Marketing Agency in Delhi. We specialize in SEO, Meta Ads, Google Ads, and custom Web Development to help local Delhi NCR businesses dominate their market.">
+
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Veltex Digital Delhi",
+      "description": "Top Digital Marketing Agency in Delhi.",
+      "url": "https://veltexdigital.com/delhi/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Delhi",
+        "addressRegion": "Delhi",
+        "addressCountry": "IN"
+      },
+      "areaServed": ["Delhi", "New Delhi", "NCR"]
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-blue': '#00f3ff',
+                        'neon-purple': '#bc13fe',
+                        'deep-navy': '#050511',
+                        'glass': 'rgba(255, 255, 255, 0.05)',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    },
+                    boxShadow: {
+                        'neon-blue': '0 0 20px rgba(0, 243, 255, 0.5)',
+                        'neon-purple': '0 0 20px rgba(188, 19, 254, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050511;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #050511;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #00f3ff, #bc13fe);
+            border-radius: 4px;
+        }
+
+        /* Moving Gradient Background */
+        .animated-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(188, 19, 254, 0.15) 0%, rgba(5, 5, 17, 0) 50%),
+                radial-gradient(circle at 10% 10%, rgba(0, 243, 255, 0.1) 0%, rgba(5, 5, 17, 0) 40%);
+            z-index: -1;
+            animation: pulseBg 10s ease-in-out infinite alternate;
+        }
+
+        @keyframes pulseBg {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Floating Animation */
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* Glassmorphism */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Glow Text */
+        .text-glow {
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+        }
+
+        /* Nav Link Hover */
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #00f3ff;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Card Hover Glow */
+        .service-card:hover {
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.2);
+            border-color: rgba(0, 243, 255, 0.5);
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-neon-purple selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass-panel" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html"
+                class="text-2xl font-bold tracking-tighter hover:text-neon-blue transition-colors duration-300">
+                VELTEX<span class="text-neon-blue">.</span>DIGITAL
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide text-gray-300">
+                <a href="../services.html" class="nav-link hover:text-white transition-colors">SERVICES</a>
+                <a href="../portfolio.html" class="nav-link hover:text-white transition-colors">PORTFOLIO</a>
+                <a href="../contact.html" class="nav-link hover:text-white transition-colors">CONTACT</a>
+            </div>
+            <a href="../contact.html"
+                class="hidden md:inline-block px-6 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-full text-white font-semibold text-sm hover:shadow-neon-blue transition-all duration-300 transform hover:scale-105">
+                GET STARTED
+            </a>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-[#050511] border-gray-800 absolute w-full left-0 top-full border-b shadow-2xl"
+            id="mobile-menu">
+            <div class="px-6 py-4 space-y-4 flex flex-col items-center">
+                <a href="../services.html" class="hover:text-neon-blue transition-colors">SERVICES</a>
+                <a href="../portfolio.html" class="hover:text-neon-blue transition-colors">PORTFOLIO</a>
+                <a href="../contact.html" class="hover:text-neon-blue transition-colors">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Delhi Focused) -->
+    <section class="relative pt-32 pb-20 flex items-center justify-center overflow-hidden" id="home">
+        <div class="animated-bg"></div>
+
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16">
+            <h1 class="text-neon-blue font-semibold tracking-widest text-sm md:text-md mb-4 uppercase"
+                data-aos="fade-down" data-aos-delay="100">Top Digital Marketing Agency in Delhi</h1>
+            <h2 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight" data-aos="zoom-in"
+                data-aos-duration="1000">
+                DOMINATE THE<br>
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple text-glow">DELHI
+                    NCR MARKET</span>
+            </h2>
+            <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                We help ambitious Delhi brands generate highly qualified leads, scale their online presence, and outrank
+                local competition using data-driven performance marketing.
+            </p>
+        </div>
+    </section>
+
+    <!-- Delhi Services SILO (The Spokes) -->
+    <section class="py-20 bg-deep-navy relative z-20" id="delhi-services">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-neon-purple font-semibold tracking-widest text-sm uppercase">Local Expertise</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Specialized Services for Delhi Businesses</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Spoke 1: Digital Marketing -->
+                <a href="digital-marketing-agency.html"
+                    class="service-card glass-panel p-8 rounded-2xl border border-white/5 transition-all duration-300 block group"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-neon-blue to-blue-600 rounded-xl flex items-center justify-center mb-6 text-white text-2xl shadow-lg group-hover:shadow-neon-blue transition-all duration-300">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 group-hover:text-neon-blue transition-colors">Digital Marketing
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Complete 360° growth strategies designed
+                        specifically for Delhi's highly competitive market landscape.</p>
+                    <span
+                        class="text-neon-blue text-sm font-semibold flex items-center group-hover:translate-x-2 transition-transform">Explore
+                        Service <i class="fas fa-arrow-right ml-2"></i></span>
+                </a>
+
+                <!-- Spoke 2: SEO Agency -->
+                <a href="seo-agency.html"
+                    class="service-card glass-panel p-8 rounded-2xl border border-white/5 transition-all duration-300 block group"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-neon-purple to-pink-600 rounded-xl flex items-center justify-center mb-6 text-white text-2xl shadow-lg group-hover:shadow-neon-purple transition-all duration-300">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 group-hover:text-neon-purple transition-colors">SEO Mastery</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Rank on page 1 for hyper-local Delhi keywords.
+                        Outsmart competitors in localized Google Search and Maps.</p>
+                    <span
+                        class="text-neon-purple text-sm font-semibold flex items-center group-hover:translate-x-2 transition-transform">Explore
+                        Service <i class="fas fa-arrow-right ml-2"></i></span>
+                </a>
+
+                <!-- Spoke 3: Google Ads Agency -->
+                <a href="google-ads-agency.html"
+                    class="service-card glass-panel p-8 rounded-2xl border border-white/5 transition-all duration-300 block group"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-14 h-14 bg-gradient-to-br from-cyan-400 to-teal-400 rounded-xl flex items-center justify-center mb-6 text-white text-2xl shadow-lg group-hover:shadow-cyan-400 transition-all duration-300">
+                        <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">Google Ads & PPC
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">High-converting ad campaigns targeting
+                        high-intent buyers exactly when they search in Delhi NCR.</p>
+                    <span
+                        class="text-cyan-400 text-sm font-semibold flex items-center group-hover:translate-x-2 transition-transform">Explore
+                        Service <i class="fas fa-arrow-right ml-2"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Delhi Section -->
+    <section class="py-20 relative bg-black/50 border-t border-white/5" id="delhi-insight">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <span class="text-yellow-400 font-semibold tracking-widest text-sm uppercase">Local Insight</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">Navigating the Complex Delhi NCR Ecosystem</h2>
+                <p class="text-gray-400 mb-6 leading-relaxed">Delhi isn't just a city; it's a rapidly evolving,
+                    fragmented marketplace spanning Connaught Place, South Delhi, Gurugram, and Noida. Generic marketing
+                    templates simply fail here.</p>
+                <p class="text-gray-400 mb-6 leading-relaxed">As a leading <strong class="text-white">performance
+                        marketing agency in Delhi</strong>, our strategies are hyper-localized. Whether you need an
+                    <strong class="text-white">affordable digital marketing agency in Delhi</strong> or a high-end SaaS
+                    partner, we understand local consumer behavior and engineer campaigns that cut through the noise.
+                </p>
+                <a href="../contact.html"
+                    class="inline-block px-8 py-3 bg-white/10 border border-white/20 rounded-full font-bold hover:bg-neon-blue hover:text-deep-navy transition-all duration-300">Partner
+                    With Us</a>
+            </div>
+            <div class="glass-panel p-8 rounded-3xl border border-white/10 text-center" data-aos="fade-left">
+                <i class="fas fa-map-marked-alt text-6xl text-neon-blue mb-6"></i>
+                <h3 class="text-2xl font-bold text-white mb-2">Dominating NCR</h3>
+                <p class="text-gray-400 text-sm mb-6">From South Ex to Cyber Hub</p>
+                <div class="grid grid-cols-2 gap-4 text-left">
+                    <div class="bg-black/40 p-3 rounded-lg border border-white/5"><i
+                            class="fas fa-check text-green-400 mr-2"></i> Local SEO Ranking</div>
+                    <div class="bg-black/40 p-3 rounded-lg border border-white/5"><i
+                            class="fas fa-check text-green-400 mr-2"></i> Geo-Targeted Ads</div>
+                    <div class="bg-black/40 p-3 rounded-lg border border-white/5"><i
+                            class="fas fa-check text-green-400 mr-2"></i> Hybrid Copywriting</div>
+                    <div class="bg-black/40 p-3 rounded-lg border border-white/5"><i
+                            class="fas fa-check text-green-400 mr-2"></i> Revenue Tracking</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- E-E-A-T Authority Section -->
+    <section class="py-20 relative border-t border-white/5 bg-deep-navy" id="authority">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-neon-purple font-semibold tracking-widest text-sm uppercase">Proven Track
+                    Record</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Driven by Data, Backed by Experience</h2>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Google rewards Experience, Expertise, Authoritativeness,
+                    and Trust (E-E-A-T). We don't just talk about results; we engineer them transparently for top brands
+                    across India.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-6">
+                    <div class="w-16 h-16 mx-auto bg-neon-blue/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-2xl text-neon-blue"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Expertise (E)</h3>
+                    <p class="text-gray-400 text-sm">Certified Google Ads & Meta Ads specialists with years of hands-on
+                        campaign management in highly competitive niches.</p>
+                </div>
+                <div class="p-6 border-y md:border-y-0 md:border-x border-white/10">
+                    <div class="w-16 h-16 mx-auto bg-yellow-400/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-award text-2xl text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Authority (A)</h3>
+                    <p class="text-gray-400 text-sm">Recognized as a leading voice in performance marketing, featured in
+                        industry case studies, and driving industry-leading ROAS.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-16 h-16 mx-auto bg-green-400/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-2xl text-green-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Trust (T)</h3>
+                    <p class="text-gray-400 text-sm">Transparent reporting, strict adherence to Google Webmaster
+                        Guidelines, and white-hat SEO strategies for long-term safety.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO FAQ Section -->
+    <section class="py-20 bg-black/50 border-t border-white/5 relative z-20" id="faqs">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <span class="text-neon-blue font-semibold tracking-widest text-sm uppercase">Common Questions</span>
+                <h2 class="text-3xl font-bold mt-2">Delhi Digital Marketing FAQs</h2>
+            </div>
+            <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+                <!-- FAQ 1 -->
+                <div class="glass-panel p-6 rounded-2xl border border-white/5">
+                    <h3 class="text-xl font-bold text-white mb-3">Are you a digital marketing agency near me in Delhi?
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Yes! While we serve clients globally, our core
+                        operations and deep market understanding cover the entire Delhi NCR region. If you are searching
+                        for a highly responsive digital partner "near me," our localized team is perfectly positioned to
+                        collaborate.</p>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="glass-panel p-6 rounded-2xl border border-white/5">
+                    <h3 class="text-xl font-bold text-white mb-3">How do I hire a top digital marketing company in
+                        Delhi?</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">To hire a reliable agency, always look for
+                        transparent case studies and verifiable ROI. At Veltex, we don't lock you into opaque contracts.
+                        We provide clear audits, measurable KPIs, and dedicated account managers so you know exactly
+                        what your investment is doing.</p>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="glass-panel p-6 rounded-2xl border border-white/5">
+                    <h3 class="text-xl font-bold text-white mb-3">Are your digital marketing services in Delhi
+                        affordable?</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">We believe in value over cheap, generic retainers.
+                        We are an affordable digital marketing agency in Delhi because our campaigns are heavily
+                        ROI-focused—meaning the revenue generated vastly outweighs the marketing cost, making our
+                        services highly cost-effective for growing businesses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 bg-black">
+        <div
+            class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div class="mb-6 md:mb-0">
+                <a href="../index.html" class="text-2xl font-bold tracking-tighter text-white">
+                    VELTEX<span class="text-neon-blue">.</span>DIGITAL
+                </a>
+                <p class="text-gray-500 text-sm mt-2">© 2026 Veltex Digital. All rights reserved.</p>
+            </div>
+
+            <div class="flex space-x-6 text-2xl">
+                <a href="#" class="text-gray-500 hover:text-neon-blue transition-colors"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-500 hover:text-neon-blue transition-colors"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-gray-500 hover:text-neon-blue transition-colors"><i
+                        class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true, offset: 100 });
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black/80', 'backdrop-blur-xl', 'shadow-lg');
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('bg-black/80', 'backdrop-blur-xl', 'shadow-lg');
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2');
+            }
+        });
+    </script>
+</body>
+
+</html>
