@@ -71,9 +71,10 @@
 <body class="antialiased selection:bg-neon-purple selection:text-white">
 
     <!-- Header Navigation -->
-    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/5">
+        <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/5" id="navbar">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="https://veltexdigital.in/" class="text-2xl font-bold tracking-tighter text-white">
+            <a href="index.html" class="text-2xl font-bold tracking-tighter text-white hover:text-neon-blue transition-colors">
                 VELTEX<span class="text-neon-blue">.</span>DIGITAL
             </a>
             <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
@@ -88,19 +89,20 @@
                 class="hidden md:inline-block px-6 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-full text-white font-semibold text-sm hover:shadow-neon-blue transition-all transform hover:scale-105">
                 GET STARTED
             </a>
-            <button class="md:hidden text-white focus:outline-none"
-                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none" id="mobile-menu-btn" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
         </div>
+        <!-- Mobile Menu Drawer -->
         <div class="md:hidden hidden bg-[#050511] border-gray-800 absolute w-full left-0 top-full border-b shadow-2xl" id="mobile-menu">
             <div class="px-6 py-4 space-y-4 flex flex-col items-center">
-                <a href="services.html" class="hover:text-neon-blue">SERVICES</a>
-                <a href="portfolio.html" class="hover:text-neon-blue">PORTFOLIO</a>
-                <a href="about.html" class="text-neon-blue">ABOUT</a>
-                <a href="pricing.html" class="hover:text-neon-blue">PRICING</a>
-                <a href="blog/index.html" class="hover:text-neon-blue">BLOG</a>
-                <a href="contact.html" class="hover:text-neon-blue">CONTACT</a>
+                <a href="services.html" class="hover:text-white transition-colors">SERVICES</a>
+                <a href="portfolio.html" class="hover:text-white transition-colors">PORTFOLIO</a>
+                <a href="about.html" class="text-neon-blue font-semibold">ABOUT</a>
+                <a href="pricing.html" class="hover:text-white transition-colors">PRICING</a>
+                <a href="blog/index.html" class="hover:text-white transition-colors">BLOG</a>
+                <a href="contact.html" class="hover:text-white transition-colors">CONTACT</a>
             </div>
         </div>
     </nav>
@@ -172,14 +174,59 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black/60 border-t border-white/5 py-8 text-center text-gray-500 text-sm">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p>&copy; 2026 Veltex Digital. All rights reserved.</p>
-            <div class="flex space-x-6">
-                <a href="delhi/index.html" class="hover:text-neon-blue">Delhi Agency</a>
-                <a href="noida/index.html" class="hover:text-neon-blue">Noida Agency</a>
-                <a href="contact.html" class="hover:text-neon-blue">Contact Us</a>
+        <!-- Standardized Footer -->
+    <footer class="py-12 border-t border-white/5 bg-black/90">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            <div class="space-y-4">
+                <a href="index.html" class="text-2xl font-bold tracking-tighter text-white">
+                    VELTEX<span class="text-neon-blue">.</span>DIGITAL
+                </a>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    India's premier performance marketing & web development agency. Scaling clinics, D2C brands, and enterprises with ROI-driven SEO & Ads.
+                </p>
+                <div class="flex space-x-4 text-xl">
+                    <a href="https://www.instagram.com/veltexdigital" target="_blank" rel="noopener" class="text-gray-400 hover:text-neon-blue transition-colors"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/veltexdigital" target="_blank" rel="noopener" class="text-gray-400 hover:text-neon-blue transition-colors"><i class="fab fa-linkedin"></i></a>
+                </div>
             </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Quick Links</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="services.html" class="hover:text-neon-blue transition-colors">Services</a></li>
+                    <li><a href="portfolio.html" class="hover:text-neon-blue transition-colors">Portfolio</a></li>
+                    <li><a href="about.html" class="hover:text-neon-blue transition-colors">About Us</a></li>
+                    <li><a href="pricing.html" class="hover:text-neon-blue transition-colors">Pricing & Packages</a></li>
+                    <li><a href="blog/index.html" class="hover:text-neon-blue transition-colors">Growth Blog</a></li>
+                    <li><a href="contact.html" class="hover:text-neon-blue transition-colors">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Target Locations</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="delhi/index.html" class="hover:text-neon-blue transition-colors">Delhi Agency Hub</a></li>
+                    <li><a href="delhi/seo-agency.html" class="hover:text-neon-blue transition-colors">SEO Agency Delhi</a></li>
+                    <li><a href="delhi/google-ads-agency.html" class="hover:text-neon-blue transition-colors">Google Ads Delhi</a></li>
+                    <li><a href="delhi/meta-ads-agency.html" class="hover:text-neon-blue transition-colors">Meta Ads Delhi</a></li>
+                    <li><a href="noida/index.html" class="hover:text-neon-blue transition-colors">Noida Agency Hub</a></li>
+                    <li><a href="noida/seo-agency.html" class="hover:text-neon-blue transition-colors">SEO Agency Noida</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Get In Touch</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li class="flex items-center"><i class="fas fa-envelope text-neon-blue mr-3"></i> contact@veltexdigital.in</li>
+                    <li class="flex items-center"><i class="fas fa-phone text-neon-purple mr-3"></i> +91 98765 43210</li>
+                    <li class="flex items-center"><i class="fas fa-map-marker-alt text-cyan-400 mr-3"></i> Delhi NCR & Noida, India</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 border-t border-white/5 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+            <p>&copy; 2026 Veltex Digital. All rights reserved.</p>
+            <p class="mt-2 md:mt-0">Built for Maximum Performance & Search Dominance.</p>
         </div>
     </footer>
 
