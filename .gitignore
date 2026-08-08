@@ -1,0 +1,4 @@
+tools/humanizer/
+*.log
+.env
+.DS_Store

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Data-Driven Digital Marketing Agency - Veltex Digital</title>
+    <link rel="canonical" href="https://veltexdigital.in/about.html" />
+    <link rel="icon" type="image/x-icon" href="https://veltexdigital.in/favicon.ico" />
+    <meta name="description"
+        content="Learn about Veltex Digital, India's premier data-driven marketing agency. Discover our founder's story, campaign management methodology, and performance track record.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="About Us | Data-Driven Digital Marketing Agency - Veltex Digital" />
+    <meta property="og:description" content="Discover Veltex Digital: Our mission, hands-on campaign methodology, and performance growth track record across India." />
+    <meta property="og:url" content="https://veltexdigital.in/about.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://veltexdigital.in/images/og-about.jpg" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About Us | Veltex Digital" />
+    <meta name="twitter:description" content="Discover Veltex Digital: Our mission, hands-on campaign methodology, and performance growth track record across India." />
+
+    <!-- AboutPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Veltex Digital",
+        "url": "https://veltexdigital.in/",
+        "logo": "https://veltexdigital.in/logo.png",
+        "description": "Top digital marketing agency in India specializing in SEO, Google Ads, Meta Ads, and custom Web Development.",
+        "founder": {
+          "@type": "Person",
+          "name": "Subir MD",
+          "jobTitle": "Founder & Managing Director"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/veltexdigital",
+          "https://www.instagram.com/veltexdigital"
+        ]
+      }
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'neon-blue': '#00f3ff', 'neon-purple': '#bc13fe', 'deep-navy': '#050511' },
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #050511; color: #ffffff; overflow-x: hidden; }
+        .glass-panel { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-neon-purple selection:text-white">
+
+    <!-- Header Navigation -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="https://veltexdigital.in/" class="text-2xl font-bold tracking-tighter text-white">
+                VELTEX<span class="text-neon-blue">.</span>DIGITAL
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                <a href="services.html" class="hover:text-white transition-colors">SERVICES</a>
+                <a href="portfolio.html" class="hover:text-white transition-colors">PORTFOLIO</a>
+                <a href="about.html" class="text-neon-blue font-semibold">ABOUT</a>
+                <a href="pricing.html" class="hover:text-white transition-colors">PRICING</a>
+                <a href="blog/index.html" class="hover:text-white transition-colors">BLOG</a>
+                <a href="contact.html" class="hover:text-white transition-colors">CONTACT</a>
+            </div>
+            <a href="contact.html"
+                class="hidden md:inline-block px-6 py-2 bg-gradient-to-r from-neon-blue to-neon-purple rounded-full text-white font-semibold text-sm hover:shadow-neon-blue transition-all transform hover:scale-105">
+                GET STARTED
+            </a>
+            <button class="md:hidden text-white focus:outline-none"
+                onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div class="md:hidden hidden bg-[#050511] border-gray-800 absolute w-full left-0 top-full border-b shadow-2xl" id="mobile-menu">
+            <div class="px-6 py-4 space-y-4 flex flex-col items-center">
+                <a href="services.html" class="hover:text-neon-blue">SERVICES</a>
+                <a href="portfolio.html" class="hover:text-neon-blue">PORTFOLIO</a>
+                <a href="about.html" class="text-neon-blue">ABOUT</a>
+                <a href="pricing.html" class="hover:text-neon-blue">PRICING</a>
+                <a href="blog/index.html" class="hover:text-neon-blue">BLOG</a>
+                <a href="contact.html" class="hover:text-neon-blue">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="pt-40 pb-20 px-6 relative text-center">
+        <div class="max-w-4xl mx-auto">
+            <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass-panel border border-neon-purple/30 text-neon-purple text-xs font-semibold uppercase tracking-wider mb-6">
+                <span>Driven By Data & Results</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight" data-aos="fade-down">
+                Engineering Measurable Growth for <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple">Modern Enterprises</span>
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-8" data-aos="fade-up">
+                Veltex Digital was founded to eliminate agency fluff. We build high-converting growth engines combining technical SEO precision, performance ad funnels, and conversion-first web architecture.
+            </p>
+        </div>
+    </header>
+
+    <!-- Core Values & Methodology -->
+    <section class="py-16 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass-panel p-8 rounded-3xl border border-white/10" data-aos="fade-up">
+                <div class="w-12 h-12 rounded-2xl bg-neon-blue/20 flex items-center justify-center text-neon-blue text-2xl mb-6">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-3">Hands-On Execution</h3>
+                <p class="text-gray-400">No account managers passing work to junior interns. Every ad campaign and technical SEO audit is managed directly by seasoned growth specialists.</p>
+            </div>
+            <div class="glass-panel p-8 rounded-3xl border border-white/10" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-12 h-12 rounded-2xl bg-neon-purple/20 flex items-center justify-center text-neon-purple text-2xl mb-6">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-3">ROAS & Bottom-Line Focus</h3>
+                <p class="text-gray-400">We don't optimize for vanity impressions or empty clicks. We measure success strictly by lead quality, CPA reduction, and verified business revenue growth.</p>
+            </div>
+            <div class="glass-panel p-8 rounded-3xl border border-white/10" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-12 h-12 rounded-2xl bg-cyan-400/20 flex items-center justify-center text-cyan-400 text-2xl mb-6">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-3">Cutting-Edge Tech Stack</h3>
+                <p class="text-gray-400">From Meta Conversions API (CAPI) server tracking to AI-assisted LSI keyword models, we deploy modern growth technology for client dominance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Agency Overview -->
+    <section class="py-16 px-6 max-w-4xl mx-auto">
+        <div class="glass-panel p-10 rounded-3xl border border-white/10 space-y-6">
+            <h2 class="text-3xl font-bold text-white mb-4">Our Growth Philosophy</h2>
+            <p class="text-gray-300 leading-relaxed">
+                In today's hyper-competitive digital ecosystem across Delhi NCR, Mumbai, Bangalore, and all major commercial hubs in India, achieving first-page search rankings or profitable ad ROAS requires deep technical discipline.
+            </p>
+            <p class="text-gray-300 leading-relaxed">
+                Whether scaling patient acquisition for healthcare clinics, driving low-CAC sales for D2C e-commerce brands, or building B2B lead funnels, our team approaches every client campaign with rigorous analytical testing and relentless optimization.
+            </p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 px-6 text-center">
+        <div class="max-w-3xl mx-auto glass-panel p-12 rounded-3xl border border-white/10">
+            <h2 class="text-3xl font-bold text-white mb-4">Partner with Veltex Digital Today</h2>
+            <p class="text-gray-300 mb-8">Ready to transform your digital acquisition funnel? Let's discuss your growth targets.</p>
+            <a href="contact.html" class="px-8 py-3 bg-gradient-to-r from-neon-blue to-neon-purple rounded-full text-white font-semibold shadow-lg hover:shadow-neon-blue transition-all">
+                Get In Touch With Our Team
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/60 border-t border-white/5 py-8 text-center text-gray-500 text-sm">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 Veltex Digital. All rights reserved.</p>
+            <div class="flex space-x-6">
+                <a href="delhi/index.html" class="hover:text-neon-blue">Delhi Agency</a>
+                <a href="noida/index.html" class="hover:text-neon-blue">Noida Agency</a>
+                <a href="contact.html" class="hover:text-neon-blue">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>
